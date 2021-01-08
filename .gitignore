@@ -350,3 +350,6 @@ MigrationBackup/
 .ionide/
 /.vscode
 /Resources/.ipynb_checkpoints
+/decrypted_images
+/encrypted_images
+/input_images
