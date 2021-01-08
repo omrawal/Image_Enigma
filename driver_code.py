@@ -18,6 +18,9 @@ cv2.imshow('secret message',secret_message_img)
 cv2.imshow('cypher image',cypher)
 cv2.waitKey()
 
+
+# cypher=cv2.imread(r'D:\Code\Git stuff\Image-Enigma\encrypted_images\20210108-184736.jpg')
+# print(cypher)
 decyphered_image=steg_var.decrypt_image(cypher)
 
 filename='./decrypted_images/'+time.strftime("%Y%m%d-%H%M%S")+'.jpg'
