@@ -6,7 +6,7 @@ class Steganography(object):
     def __init__(self):
         pass
 
-    def binary_to_deciaml(self,n): # takes string input && returns integer
+    def binary_to_decimal(self,n): # takes string input && returns integer
         return(int(n,2))
 
     def decimal_to_binary(self,n): # takes integer input && returns string
@@ -16,7 +16,7 @@ class Steganography(object):
         x_bin=self.decimal_to_binary(x)
         y_bin=self.decimal_to_binary(y)
         new_val_bin=x_bin[0:4]+y_bin[0:4]
-        new_val_dec=self.binary_to_deciaml(new_val_bin)
+        new_val_dec=self.binary_to_decimal(new_val_bin)
         return new_val_dec
     
     def hide_pixel(self,x,y): # x,y is list of B,G,R  x is mask,  y in secret
@@ -30,7 +30,7 @@ class Steganography(object):
     def unhide(self,x):
         x_bin=self.decimal_to_binary(x)
         new_val_bin=x_bin[4:]+'0000'
-        new_val_dec=self.binary_to_deciaml(new_val_bin)
+        new_val_dec=self.binary_to_decimal(new_val_bin)
         return new_val_dec
 
     def create_blank_image(self):
