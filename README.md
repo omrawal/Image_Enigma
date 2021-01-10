@@ -18,4 +18,3 @@ pip install opencv-python
 # Open Source
 
 I will be hapy to accept pull requests with added functionalities / modifications / bug-fixes. :)
-
