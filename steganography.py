@@ -15,7 +15,7 @@ class Steganography(object):
     def hide(self,x,y): # x is mask,  y in secret
         x_bin=self.decimal_to_binary(x)
         y_bin=self.decimal_to_binary(y)
-        new_val_bin=x_bin[0:2]+y_bin[0:6]
+        new_val_bin=x_bin[0:3]+y_bin[0:5]
         new_val_dec=self.binary_to_decimal(new_val_bin)
         return new_val_dec
     
@@ -29,7 +29,7 @@ class Steganography(object):
     
     def unhide(self,x):
         x_bin=self.decimal_to_binary(x)
-        new_val_bin=x_bin[2:]+'00'
+        new_val_bin=x_bin[3:]+'000'
         new_val_dec=self.binary_to_decimal(new_val_bin)
         return new_val_dec
 
